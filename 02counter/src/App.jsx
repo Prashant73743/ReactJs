@@ -5,19 +5,19 @@ import './App.css'
 
 function App() {
   
-  let [ count , mango ]  = useState(1)
+  let [ count , setCount ]  = useState(1)
 
  
   const addValue = () => {
        count += 1;
-       mango(count);
+       setCount(count);
        if( count >= 20){
           count === 20;
        }
   }
 
   const removeValue = () => {
-    mango(count - 1);
+    setCount(count - 1);
     if( count <= 0){
       count === 0;
     }
