@@ -38,17 +38,15 @@ function Header() {
 
 
   return (
-    <header className='py-3 shadow bg-yellow-500'>
-      
+    <header className='py-3 shadow bg-gray-500'>
       <Container>
-        
         <nav className='flex'>
           <div className='mr-4'>
             <Link to='/'>
-              <Logo width='6 0px'   />
+              <Logo width='70px'   />
+
               </Link>
           </div>
-          
           <ul className='flex ml-auto'>
             {navItems.map((item) => 
             item.active ? (
@@ -60,13 +58,12 @@ function Header() {
               </li>
             ) : null
             )}
-          
-            {authStatus && (// if authstatus is true then only it will show logoutbtn
+            {authStatus && (
               <li>
                 <LogoutBtn />
               </li>
             )}
-        </ul>
+          </ul>
         </nav>
         </Container>
     </header>
